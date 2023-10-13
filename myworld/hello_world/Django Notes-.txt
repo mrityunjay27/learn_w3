@@ -67,6 +67,8 @@ By default, all Models created in the Django project will be created as tables i
 		>>> x.joined_date = '2022-01-05'
 		>>> x.save()
 
+15. Display Data
+
 
 
 
@@ -125,6 +127,50 @@ Work Flow
 		
 		Django creates a file describing the changes and stores the filE in the /migrations/ folder:
 	The table is not created yet, you will have to run one more command, then Django will create and execute an SQL statement, based on the content of the new file in the /migrations/ 	folder. Now you have a Member table in you database!
+	ADD UPDATE DEL DATA,  UPDATE MODEL
+9. Displaying model 
+	my_tennis_club/members/templates/all_members.html:
+-------------------------Template------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Members</h1>
+  
+<ul>
+  {% for x in mymembers %}
+    <li>{{ x.firstname }} {{ x.lastname }}</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
+ --------------------- View -----------------------------
+my_tennis_club/members/views.py:
+
+from django.http import HttpResponse
+from django.template import loader
+from .models import Member
+
+def members(request):
+  mymembers = Member.objects.all().values()
+  template = loader.get_template('all_members.html')
+  context = {
+    'mymembers': mymembers,
+  }
+  return HttpResponse(template.render(context, request)
+
+--------------------Desc----------------------
+The members view does the following:
+
+Creates a mymembers object with all the values of the Member model.
+Loads the all_members.html template.
+Creates an object containing the mymembers object.
+Sends the object to the template.
+Outputs the HTML that is rendered by the template.
+
+py manage.py runserver
+In the browser window, type 127.0.0.1:8000/members/ in the address bar.
 
 
 

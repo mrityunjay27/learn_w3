@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91891fdb-fc31-4c45-9b47-861e0acf4bdb" name="Changes" comment="M6: Updated model for member and applied migrations">
-      <change afterPath="$PROJECT_DIR$/myworld/hello_world/members/templates/all_members.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myworld/hello_world/members/templates/myfirst.html" afterDir="false" />
+    <list default="true" id="91891fdb-fc31-4c45-9b47-861e0acf4bdb" name="Changes" comment="M7: Added template and changed views to display members">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myworld/hello_world/Django Notes-.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/Django Notes-.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myworld/hello_world/members/templates/all_members.html" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/members/templates/all_members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myworld/hello_world/members/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/members/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myworld/hello_world/members/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/members/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697227359998</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="M7: Added template and changed views to display members">
+      <option name="closed" value="true" />
+      <created>1697228166543</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697228166543</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +168,7 @@
     <MESSAGE value="M4: Added template and changes in setting" />
     <MESSAGE value="M5: Added model for member and applied migrations" />
     <MESSAGE value="M6: Updated model for member and applied migrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="M6: Updated model for member and applied migrations" />
+    <MESSAGE value="M7: Added template and changed views to display members" />
+    <option name="LAST_COMMIT_MESSAGE" value="M7: Added template and changed views to display members" />
   </component>
 </project>
