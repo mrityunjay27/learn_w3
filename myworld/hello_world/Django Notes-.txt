@@ -1,0 +1,128 @@
+Django Notes-
+
+1. MVT 
+2. Structure of Django: Project -> Apps -> WebPages  (You cannot have a web page created with Django without an app.)
+3. App in Django - An app is a web application that has a specific meaning in your project, like a home page, a contact form, or a members database.
+4. Django views are Python functions that takes http requests and returns http response, like HTML documents. A web page that uses Django is full of views with different tasks an missions.  	Views are usually put in a file called views.py located on your app's folder.
+5. your project's urls.py is the central URL configuration that includes URLs from different apps. The members app's urls.py defines URL patterns specific to the members app and handles   	URLs under 'members/'
+6. py manage.py migrate is a command used to update your database schema to match the current state of your Django project's models.
+7. Templates- htmls
+8. Models-In Django, data is created in objects, called Models, and is actually tables in a database.
+9. SQLite Database
+When we created the Django project, we got an empty SQLite database.
+
+It was created in the my_tennis_club root folder, and has the filename db.sqlite3.
+
+By default, all Models created in the Django project will be created as tables in this database.
+
+10. flow 8
+	View SQL
+	As a side-note: you can view the SQL statement that were executed from the migration above. All you have to do is to run this command, with the migration number:
+
+	py manage.py sqlmigrate members 0001
+
+11. Django Insert ::: To open a Python shell, py manage.py shell
+			from members.models import Member // import the model
+			Member.objects.all() o/p-> <QuerySet []> A QuerySet is a collection of data from a database
+			Add a record to the table,
+
+				>>> member = Member(firstname='Emil', lastname='Refsnes')
+				>>> member.save()
+				>>> Member.objects.all()                                  
+					<QuerySet [<Member: Member object (1)>]>
+				>>> Member.objects.all().values()
+					<QuerySet [{'id': 1, 'firstname': 'Emil', 'lastname': 'Refsnes'}]>
+		Multiple records
+		>>> member1 = Member(firstname='Tobias', lastname='Refsnes')
+		>>> member2 = Member(firstname='Linus', lastname='Refsnes')
+		>>> member3 = Member(firstname='Lene', lastname='Refsnes')
+		>>> member4 = Member(firstname='Stale', lastname='Refsnes')
+		>>> member5 = Member(firstname='Jane', lastname='Doe')
+		>>> members_list = [member1, member2, member3, member4, member5]
+		>>> for x in members_list:
+		>>>   x.save()
+
+12. Update Records
+	To update records that are already in the database, we first have to get the record we want to update:
+
+		>>> from members.models import Member
+		>>> x = Member.objects.all()[4]
+	x will now represent the member at index 4, which is "Stale Refsnes", but to make sure, let us see if that is correct:
+
+		>>> x.firstname
+			'Stale'
+		>>> x.firstname = "Stalikken"
+		>>> x.save()
+	Execute this command to see if the Member table got updated:
+
+		>>> Member.objects.all().values()
+
+
+
+
+
+
+
+
+
+Work Flow
+1. Install python
+2. Create a virtual environment. Command: py -m venv myworld
+3. Install Django Command: py -m pip install Django
+4. Navigate to myworld folder and create django project Command: django-admin startproject my_tennis_club.
+   It will make following things
+	my_tennis_club
+    		-manage.py
+    		-my_tennis_club/
+        		__init__.py
+        		asgi.py
+        		settings.py
+        		urls.py
+        		wsgi.py
+
+5. Goto my_tennis_club and Start a server (py manage.py runserver).
+6. Create an app (py manage.py startapp members) inside my_tennis_club project (outer one)
+	Result
+	my_tennis_club
+    		-manage.py
+    		-my_tennis_club/
+			__init__.py
+        		asgi.py
+        		settings.py
+        		urls.py
+        		wsgi.py
+    		-members/
+        	   -migrations/
+           		- __init__.py
+        	   -__init__.py
+        	   -admin.py
+        	   -apps.py
+        	   -models.py
+        	   -tests.py
+         	   -views.py
+
+7. In order to make a webpage in members
+	Make template
+	Make views and use above template
+	define urlpatterns in member app as well as main applcation
+	change seetings.py
+8.  Create models in models.py in member applcation
+	Migrate
+	Now when we have described a Model in the models.py file, we must run a command to actually create the table in the database.
+
+		Navigate to the /my_tennis_club/ folder and run this command:
+			py manage.py makemigrations members
+		
+		Django creates a file describing the changes and stores the filE in the /migrations/ folder:
+	The table is not created yet, you will have to run one more command, then Django will create and execute an SQL statement, based on the content of the new file in the /migrations/ 	folder. Now you have a Member table in you database!
+
+
+
+	
+	
+
+
+
+
+
+
