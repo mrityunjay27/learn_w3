@@ -56,6 +56,16 @@ By default, all Models created in the Django project will be created as tables i
 	Execute this command to see if the Member table got updated:
 
 		>>> Member.objects.all().values()
+13. Delete
+	>>> x.delete()
+14. Update model
+	To update model(ADDING A FIELD) we have to handle null case if we already have some data in DB. joined_date = models.DateField(null=True)
+	Addinf data to this 
+		from members.models import Member
+		>>> x = Member.objects.all()[0]
+		>>> x.phone = 5551234
+		>>> x.joined_date = '2022-01-05'
+		>>> x.save()
 
 
 
