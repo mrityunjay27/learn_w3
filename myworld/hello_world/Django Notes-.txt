@@ -68,7 +68,42 @@ By default, all Models created in the Django project will be created as tables i
 		>>> x.save()
 
 15. Display Data
+16. Django Admin is a really great tool in Django, it is actually a CRUD* user interface of all your models!
+	It is free and comes ready-to-use with Django.
+	The urlpatterns[] list takes requests going to admin/ and sends them to admin.site.urls, which is part of a built-in application that comes with Django, and contains a lot of functionality and user interfaces, one of them being the log-in user interface.
+Create a user login by : py manage.py createsuperuser
+After loggin in , The Members model is missing, as it should be, you have to tell Django which models that should be visible in the admin interface
+This is done in a file called admin.py, and is located in your app's folder, which in our case is the members folder.
 
+Insert a couple of lines here to make the Member model visible in the admin page:
+
+my_tennis_club/members/admin.py:
+
+from django.contrib import admin
+from .models import Member
+
+# Register your models here.
+admin.site.register(Member)
+
+-------------- diplay better-----------------
+We can control the fields to display by specifying them in in a list_display property in the admin.py file.
+
+First create a MemberAdmin() class and specify the list_display tuple, like this:
+
+my_tennis_club/members/admin.py:
+
+from django.contrib import admin
+from .models import Member
+
+# Register your models here.
+
+class MemberAdmin(admin.ModelAdmin):
+  list_display = ("firstname", "lastname", "joined_date",)
+  
+admin.site.register(Member, MemberAdmin)
+Remember to add the MemberAdmin as an argumet in the admin.site.register(Member, MemberAdmin).
+
+CAN UPDATE ADD, DELETE MEMBERS FROM THE INTERFACE
 
 
 

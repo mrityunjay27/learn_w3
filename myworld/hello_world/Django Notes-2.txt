@@ -1,0 +1,154 @@
+# Template Variable: You can render variables by putting them inside {{ }} brackets. Example : <h1>Hello {{ firstname }}, how are you?</h1>
+# The variable firstname in the example above was sent to the template via a view:
+
+	views.py:
+
+from django.http import HttpResponse
+from django.template import loader
+
+def testing(request):
+  template = loader.get_template('template.html')
+  context = {
+    'firstname': 'Linus',
+  }
+  return HttpResponse(template.render(context, request))
+
+# You can also create variables directly in the template, by using the {% with %} template tag.
+
+The variable is available until the {% endwith %} tag appears:
+
+Example
+templates/template.html:
+
+{% with firstname="Tobias" %}
+<h1>Hello {{ firstname }}, how are you?</h1>
+{% endwith %}
+
+# We use the Django template tag {% for %} to loop.
+
+# if and for, are called "template tags" in Django.
+
+To execute template tags, we surround them in {% %} brackets.
+
+{% if greeting == 1 %}
+  <h1>Hello</h1>
+{% else %}
+  <h1>Bye</h1>
+{% endif %}
+
+
+# IF TAG
+{% if greeting == 1 %}
+  <h1>Hello</h1>
+{% elif greeting == 2 %}
+  <h1>Welcome</h1>
+{% else %}
+  <h1>Goodbye</h1>
+{% endif %}
+
+>,<,==,!=,or,and,in, not in, is ,not is,
+
+# FOR TAG
+
+{% for x in cars %}
+  <h1>{{ x.brand }}</h1>
+  <p>{{ x.model }}</p>
+  <p>{{ x.year }}</p>
+{% endfor %} 
+
+The reversed keyword is used when you want to do the loop in reversed order.
+
+Example
+{% for x in members reversed %}
+  <h1>{{ x.id }}</h1>
+  <p>
+    {{ x.firstname }}
+    {{ x.lastname }}
+  </p>
+{% endfor %}
+
+The empty keyword can be used if you want to do something special if the object is empty.
+The empty keyword can also be used if the object does not exist:
+
+Example
+<ul>
+  {% for x in emptytestobject %}
+    <li>{{ x.firstname }}</li>
+  {% empty %}
+    <li>No members</li>
+  {% endfor %}
+</ul> 
+
+# Django has some variables that are available for you inside a loop:
+
+forloop.counter  The current iteration, starting at 1.
+forloop.counter0 The current iteration, starting at 0.
+forloop.first    Allows you to test if the loop is on its first iteration.
+forloop.last     Allows you to test if the loop is on its last iteration.
+forloop.parentloop
+forloop.revcounter  The current iteration if you start at the end and count backwards, ending up at 1.
+forloop.revcounter0 The current iteration if you start at the end and count backwards, ending up at 0.
+
+# Django comment tag.
+<h1>Welcome Everyone</h1>
+{% comment %}
+  <h1>Welcome ladies and gentlemen</h1>
+{% endcomment %}
+
+
+You can add a message to your comment, to help you remember why you wrote the comment, or as message to other people reading the code.
+
+Example
+Add a description to your comment:
+
+<h1>Welcome Everyone</h1>
+{% comment "this was the original welcome message" %}
+    <h1>Welcome ladies and gentlemen</h1>
+{% endcomment %}
+
+You can also use the {# ... #} tags when commenting out code, which can be easier for smaller comments:
+
+# include tag
+ The include tag allows you to include a template inside the current template.
+
+This is useful when you have a block of content that is the same for many pages.
+
+ExampleGet your own Django Server
+templates/footer.html:
+
+<p>You have reached the bottom of this page, thank you for your time.</p>
+templates/template.html:
+
+<h1>Hello</h1>
+
+<p>This page contains a footer in a template.</p>
+
+{% include 'footer.html' %} 
+---------
+You can send variables into the template by using the with keyword.
+
+templates/mymenu.html:
+
+<div>HOME | {{ me }} | ABOUT | FORUM | {{ sponsor }}</div>
+
+
+templates/template.html:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+{% include "mymenu.html" with me="TOBIAS" sponsor="W3SCHOOLS" %}
+
+<h1>Welcome</h1>
+
+<p>This is my webpage</p>
+
+</body>
+</html>
+
+#
+
+
+
+
