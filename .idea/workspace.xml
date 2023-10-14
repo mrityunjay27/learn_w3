@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91891fdb-fc31-4c45-9b47-861e0acf4bdb" name="Changes" comment="M9: Added master template and used it in all_members and details">
+    <list default="true" id="91891fdb-fc31-4c45-9b47-861e0acf4bdb" name="Changes" comment="M12: Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myworld/hello_world/Django Notes-.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/Django Notes-.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myworld/hello_world/members/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/members/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myworld/hello_world/members/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/members/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myworld/hello_world/members/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/members/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -48,15 +49,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/ASUS/PycharmProjects/learn_w3",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS/PycharmProjects/learn_w3&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="learn_w3" />
@@ -169,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697260953827</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="M12: Test">
+      <option name="closed" value="true" />
+      <created>1697263485311</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1697263485311</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +203,7 @@
     <MESSAGE value="M8: Template, view and url changes for details page" />
     <MESSAGE value="M8.1: Template, view and url changes for details page" />
     <MESSAGE value="M9: Added master template and used it in all_members and details" />
-    <option name="LAST_COMMIT_MESSAGE" value="M9: Added master template and used it in all_members and details" />
+    <MESSAGE value="M12: Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="M12: Test" />
   </component>
 </project>

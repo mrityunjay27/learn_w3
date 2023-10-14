@@ -21,3 +21,10 @@ def details(request, id):  #  that will deal with incoming requests to the membe
 def main(request):  # Deals with root "/"
   template = loader.get_template('main.html')
   return HttpResponse(template.render())
+
+def testing(request):
+  template = loader.get_template('test_template.html')
+  context = {
+    'fruits': ['Apple', 'Banana', 'Cherry'],
+  }
+  return HttpResponse(template.render(context, request))
