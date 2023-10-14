@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91891fdb-fc31-4c45-9b47-861e0acf4bdb" name="Changes" comment="M7: Added template and changed views to display members">
+    <list default="true" id="91891fdb-fc31-4c45-9b47-861e0acf4bdb" name="Changes" comment="M8: Template, view and url changes for details page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myworld/hello_world/Django Notes-.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/Django Notes-.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myworld/hello_world/members/templates/all_members.html" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/members/templates/all_members.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myworld/hello_world/members/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/members/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myworld/hello_world/members/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/members/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697228166543</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="M8: Template, view and url changes for details page">
+      <option name="closed" value="true" />
+      <created>1697229537505</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697229537505</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +174,7 @@
     <MESSAGE value="M5: Added model for member and applied migrations" />
     <MESSAGE value="M6: Updated model for member and applied migrations" />
     <MESSAGE value="M7: Added template and changed views to display members" />
-    <option name="LAST_COMMIT_MESSAGE" value="M7: Added template and changed views to display members" />
+    <MESSAGE value="M8: Template, view and url changes for details page" />
+    <option name="LAST_COMMIT_MESSAGE" value="M8: Template, view and url changes for details page" />
   </component>
 </project>
