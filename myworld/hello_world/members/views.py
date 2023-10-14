@@ -17,3 +17,7 @@ def details(request, id):  #  that will deal with incoming requests to the membe
     'mymember': mymember,
   }
   return HttpResponse(template.render(context, request))
+
+def main(request):  # Deals with root "/"
+  template = loader.get_template('main.html')
+  return HttpResponse(template.render())
