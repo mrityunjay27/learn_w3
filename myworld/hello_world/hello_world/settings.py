@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-iz*6hm7=ikw@ya*twj=mhqv1q80*!1q)9wb2(za=o1l6=lg(xo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True  #Made it so because css of admin was not loading
 
 ALLOWED_HOSTS = ['*']
 

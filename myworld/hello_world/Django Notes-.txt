@@ -249,7 +249,48 @@ my_tennis_club/members/templates/all_members.html:
 
 Follow commit 9
 
-12.
+12.Similarily add main page for root "/"
+	Add template using master template
+	Add view to handle
+	Chnage url pattern
+	Route from all_members to root
+
+13. Page Not fount
+	Important: When DEBUG = False, Django requires you to specify the hosts you will allow this Django project to run from.
+
+In production, this should be replaced with a proper domain name:
+
+ALLOWED_HOSTS = ['yourdomain.com']
+ 
+ For now
+Set the debug property to False, and allow the project to run from your local host:
+
+my_tennis_club/my_tennis_club/settings.py:
+
+.
+.
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+ALLOWED_HOSTS = ['*']
+
+After above chnages : In the browser window, type 127.0.0.1:8000/masfdfg/ in the address bar, and you will get the built-in 404 template:
+
+Customize the 404 Template
+Django will look for a file named 404.html in the templates folder, and display it when there is a 404 error.
+
+If no such file exists, Django shows the "Not Found" that you saw in the example above.
+
+To customize this message, all you have to do is to create a file in the templates folder and name it 404.html, and fill it with whatever you want:
+
+14. Test view
+
+Test View
+When testing different aspects of Django, it can be a good idea to have somewhere to test code without destroying the main project.
+
+This is optional off course, but if you like to follow all steps in this tutorial, you should add a test view that is exactly like the one we create below.
+
+Same as other endpoints , /testing create view template urlchange 	
 
 
 	
