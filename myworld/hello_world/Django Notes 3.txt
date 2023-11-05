@@ -1,0 +1,23 @@
+------------QuerySet-----------
+A QuerySet is a collection of data from a database.
+A QuerySet is built up as a list of objects.
+we use the .all() method to get all the records and fields of the Member model:
+See Commit m17
+
+def testing(request):
+  mydata = Member.objects.all()
+  template = loader.get_template('template.html')
+  context = {
+    'mymembers': mydata,
+  }
+  return HttpResponse(template.render(context, request))
+
+<QuerySet [
+  <Member: Member object (1)>,
+  <Member: Member object (2)>,
+  <Member: Member object (3)>,
+  <Member: Member object (4)>,
+  <Member: Member object (5)>
+]>
+
+**********************************

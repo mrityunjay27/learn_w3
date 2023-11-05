@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91891fdb-fc31-4c45-9b47-861e0acf4bdb" name="Changes" comment="M14: Setup for admin and CRUD">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="91891fdb-fc31-4c45-9b47-861e0acf4bdb" name="Changes" comment="M16: Formatted Notes and added a note file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myworld/hello_world/Django Notes-.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/Django Notes-.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myworld/hello_world/Django Notes 3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/Django Notes 3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myworld/hello_world/Django Notes-2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/Django Notes-2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myworld/hello_world/members/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/members/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myworld/hello_world/members/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myworld/hello_world/members/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +196,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697297764893</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="M15: Updated notes">
+      <option name="closed" value="true" />
+      <created>1697301909434</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1697301909434</updated>
+    </task>
+    <task id="LOCAL-00015" summary="M16: Formatted Notes and added a note file">
+      <option name="closed" value="true" />
+      <created>1699208272480</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1699208272480</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,6 +240,8 @@
     <MESSAGE value="M12: Test" />
     <MESSAGE value="M13: Test View changes" />
     <MESSAGE value="M14: Setup for admin and CRUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="M14: Setup for admin and CRUD" />
+    <MESSAGE value="M15: Updated notes" />
+    <MESSAGE value="M16: Formatted Notes and added a note file" />
+    <option name="LAST_COMMIT_MESSAGE" value="M16: Formatted Notes and added a note file" />
   </component>
 </project>
