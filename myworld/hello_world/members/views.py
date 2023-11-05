@@ -31,8 +31,14 @@ def testing(request):
 
 def listMembers(request):
   mydata = Member.objects.all()
+  mydata_1 = Member.objects.all().values()  # changes queryset to python dict (key-value pair)
+  mydata_2 = Member.objects.values_list('firstname')  # returns only firtname column
+  mydata_3 = Member.objects.filter(firstname='Tobias').values()  #returns the row with given filter
   template = loader.get_template('table_members.html')
   context = {
     'mymembers': mydata,
+    'mymembers1' : mydata_1,
+    'mymembers2' : mydata_2,
+    'mymembers3' : mydata_3,
   }
   return HttpResponse(template.render(context, request))
