@@ -54,3 +54,22 @@ To sort QuerySets, Django uses the order_by() method
 
 ******************************************
 
+---------Static-------
+For managing static files like css and images
+
+Django does not have a built-in solution for serving static files, at least not in production when DEBUG has to be False.
+
+We have to use a third-party solution to accomplish this.
+
+In this Tutorial we will use WhiteNoise, which is a Python library, built for serving static files.
+pip install whitenoise
+
+
+
+----------requirements.txt-----------------
+ py -m pip freeze > requirements.txt
+creates requirement file ,tha list all the dependency for the project.
+
+to install this in new systems
+pip install requirements.txt
+
