@@ -21,3 +21,36 @@ def testing(request):
 ]>
 
 **********************************
+
+>The values() method allows you to return each object as a Python dictionary, with the names   and values as key/value pairs:
+>The values_list() method allows you to return only the columns that you specify. 
+            mydata = Member.objects.values_list('firstname') 
+                  Return only the firstname columns:
+>You can filter the search to only return specific rows/records, by using the filter() method.
+mydata = Member.objects.filter(firstname='Emil').values()
+
+-----------QuerySet filter--------------
+
+filter() method is used to filter your search, and allows you to return only the rows that matches the search term.
+mydata = Member.objects.filter(firstname='Emil').values()
+AND=> mydata = Member.objects.filter(lastname='Refsnes', id=2).values()
+OR=>  mydata = Member.objects.filter(firstname='Emil').values() |     			Member.objects.filter(firstname='Tobias').values()
+		Pipe is used incase of OR.
+	Alternate way to use OR is to import and use Q expressions
+	from django.db.models import Q
+	mydata = Member.objects.filter(Q(firstname='Emil') | 			  	  	               Q(firstname='Tobias')).values()
+
+Field Lookups=> 
+> Return the records where firstname starts with the letter 'L':
+  mydata = Member.objects.filter(firstname__startswith='L').values()
+  Similarily there are more lookups.
+
+
+---------ORDER BY ----------------
+To sort QuerySets, Django uses the order_by() method
+> mydata = Member.objects.all().order_by('firstname').values()
+> mydata = Member.objects.all().order_by('-firstname').values()
+> mydata = Member.objects.all().order_by('lastname', '-id').values() (Multiple order by)
+
+******************************************
+
